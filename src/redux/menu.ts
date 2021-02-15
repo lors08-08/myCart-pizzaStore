@@ -8,7 +8,7 @@ import {
 const initialState: MenuState = {
   loadingMenu: false,
 
-  menuItems: null,
+  menuItems: [],
 };
 
 function menu(state = initialState, action: MenuAction): MenuState {

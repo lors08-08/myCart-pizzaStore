@@ -1,7 +1,10 @@
 {
   "cart": [
     {
-      "menuId": 1,
+      "name": "Peperoni",
+      "price": 350,
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCyEFr6ubZ-wSv2Dzj-lmtRngIQLIj5wh4WQ&usqp=CAU",
+      "quantity": 1,
       "id": 1
     }
   ],
