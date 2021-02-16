@@ -20,7 +20,7 @@ export function loadCart(): ThunkAction<void, RootState, null, CartAction> {
   return (dispatch) => {
     dispatch({ type: cart_load_start });
 
-    fetch("http://localhost:3010/cart")
+    fetch("/cart")
       .then((response) => response.json())
       .then((json) => {
         dispatch({
@@ -35,7 +35,7 @@ export function loadMenu(): ThunkAction<void, RootState, null, MenuAction> {
   return (dispatch) => {
     dispatch({ type: menu_load_start });
 
-    fetch("http://localhost:3010/menu")
+    fetch("/menu")
       .then((response) => response.json())
       .then((json) => {
         dispatch({
@@ -54,7 +54,7 @@ export function addItem(
 ): ThunkAction<void, RootState, null, CartAction> {
   return (dispatch) => {
     dispatch({ type: cart_order_start });
-    fetch("http://localhost:3010/cart", {
+    fetch("/cart", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -82,7 +82,7 @@ export function deleteItem(
 ): ThunkAction<void, RootState, null, CartAction> {
   return (dispatch) => {
     dispatch({ type: cart_delete_start });
-    fetch(`http://localhost:3010/cart/${id}`, {
+    fetch(`/cart/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())
@@ -112,7 +112,7 @@ export function SetAmount(
 ): ThunkAction<void, RootState, null, CartAction> {
   return (dispatch) => {
     dispatch({ type: cart_amount_start });
-    fetch(`http://localhost:3010/cart/${id}`, {
+    fetch(`/cart/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

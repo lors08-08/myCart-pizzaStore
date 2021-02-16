@@ -18,9 +18,9 @@ const TopBar: React.FC = () => {
   const classes = useStyles();
 
   return (
-    <Grid className={classes.header} container justify={"center"}>
+    <Grid className={classes.header} container justify="center">
       <Grid item xs={12}>
-        <LocalPizzaOutlinedIcon fontSize={"large"} />
+        <LocalPizzaOutlinedIcon data-test="logo" fontSize="large" />
       </Grid>
       <Grid item xs={12}>
         MyCart

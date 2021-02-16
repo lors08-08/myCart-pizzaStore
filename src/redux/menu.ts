@@ -11,7 +11,7 @@ const initialState: MenuState = {
   menuItems: [],
 };
 
-function menu(state = initialState, action: MenuAction): MenuState {
+function menu(state: MenuState = initialState, action: MenuAction): MenuState {
   switch (action.type) {
     case menu_load_start:
       return {
