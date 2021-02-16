@@ -9,7 +9,7 @@ import Menu from "../Menu/Menu";
 
 const Cart: React.FC = () => {
   const menu = useSelector((state: RootState) => state.menu.menuItems);
-  const cart = useSelector((state: RootState) => state.cart.cartItems);
+  const cart = useSelector((state: RootState) => state.cart.cartItems.reverse());
 
   return (
     <Grid container>
